@@ -1,10 +1,18 @@
 import React from 'react'
 
-import { ExampleComponent } from 'wp-toggle-button'
+import ToggleButton from 'wp-toggle-button'
 import 'wp-toggle-button/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <ToggleButton
+      options={[
+        { label: 'one', value: "1" },
+        { label: 'two', value: "2" }
+      ]}
+      onChange={() => console.log('changing...')}
+    />
+  )
 }
 
 export default App
