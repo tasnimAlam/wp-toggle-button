@@ -15,13 +15,20 @@ npm install --save wp-toggle-button
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'wp-toggle-button'
+import ToggleButton from 'wp-toggle-button'
 import 'wp-toggle-button/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
-  }
+    return (
+      <ToggleButton
+        options={[
+          { label: 'one', value: "1" },
+          { label: 'two', value: "2" }
+        ]}
+        onChange={(value) => console.log('value is ', value)}
+      />
+    )
 }
 ```
 
